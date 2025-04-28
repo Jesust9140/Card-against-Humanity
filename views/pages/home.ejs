@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<main>
+  <h2>Welcome to the Game</h2>
+  <% if (!user) { %>
+    <a href="/login">Login</a> | <a href="/register">Register</a>
+  <% } else { %>
+    <a href="/game">Play Game</a>
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  <% } %>
+</main>
+<%- include('../partials/footer') %>
